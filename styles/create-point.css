@@ -1,0 +1,113 @@
+#page-create-point{
+    width: 90%;
+    max-width: 1100px;
+    /*alinhamento de caixa pelo lado de fora*/
+    margin: 0 auto;
+}
+
+#page-create-point header{
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a{
+    color: var(--title-color);
+    font-style: bold;
+    display: flex;
+    align-items: center;
+
+}
+
+#page-create-point header a span{
+    background-image: url('../extras-aula-1/icones/arrow-left.svg');
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 16px;
+
+}
+
+form{
+    background-color: white;
+    /*padding é responsavel pelo preenchimento interno da minha box*/
+    padding: 64px;
+    border-radius: 8px;
+    margin-top: 80px;
+    margin: 80px auto;
+    max-width: 730px;
+    box-sizing: border-box;
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form .field{
+    /*flex:1 é para que a caixa field preencha o espaço*/
+    flex: 1;
+    display: flex;
+    /*o flex coloca um ao lado do outro entao posso mudar para deixar em coluna*/
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input,
+form select{
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    /*outline é um elemento visual que indica que o campo esta selecionado, se eu coloco o valor none a linha preta some ao ser selecionado*/
+}
+form select{
+    --moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+/*pega um field seguido de um field*/
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    /*quando coloco esse transition aplica transição pra tudo o que puder nao so pra cor*/
+    transition: background-color 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
+

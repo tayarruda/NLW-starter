@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        
+        <!--meta serve para configurar os metadados do documento-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar um Ponto de Coleta</title><!--configura o título da página-->
+        
+        <!--pegando do google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">    
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/create-point.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+
+
+    </head>
+
+    <body>
+        <div id="page-create-point">
+
+                <header>
+                    <img src="extras-aula-1/icones/logo.svg" alt="logomarca">
+                        <a href="#"> 
+                            <span></span>
+                            Voltar para Home
+                        </a>
+                </header>
+
+                <form action="">
+                    <h1>Cadastro do Ponto de Coleta</h1>
+                    
+                    <fieldset>
+                        <!--fieldset: uma coleção de campos-->
+                        <legend>
+                            <h2>Dados da Entidade</h2>
+                        </legend>
+                        <!--field recebe um campo com um nome(label) e a caixa(input)-->
+                        <div class="field">
+                            <label for="name">Nome da Entidade</label>
+                            <input type="text" name="name">
+
+                        </div>
+
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="address">Endereço</label>
+                                <input type="text" name="address">
+
+                            </div>
+
+                            <div class="field">
+                                <label for="address">Número/Complemento</label>
+                                <!--quando coloco type='number' o campo só recebe numeros-->
+                                <input type="text" name="address">
+
+                            </div>
+
+                        </div>
+
+                        <div class="field-group">
+
+                            <div class="field">
+                                <label for="state">Estado</label>
+                                <select name="uf">
+                                    <option value="">Selecione o Estado</option>
+                                </select>
+
+                                <!--para quando submeter o formulario na url do site nao ficar aparecendo os id da api do ibge-->
+                                <input type="hidden" name="state">
+
+                            </div>
+
+                            <div class="field">
+                                <label for="city">Cidade</label>
+                                <!--o disable é para que ele não sejahabilitado. vai habilitar com js depois que tiver inserido o estado-->
+                                <select name="city" disabled>
+                                    <option value="">Selecione a Cidade</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                    </fieldset>
+
+                    <!--submit significa que quando clicar vai tentar enviar o formulario-->
+                    <button type="submit">Cadastrar Ponto de Coleta</button>
+                    </button>
+                </form>
+
+        </div>
+
+        <!--colocando o javascript no html-->
+        <script src="scripts/create-point.js"></script>
+    </body>
+</html>
