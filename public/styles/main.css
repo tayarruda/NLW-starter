@@ -1,0 +1,36 @@
+/* root é a raiz do documento e pode colocar variaveis que vao ser replicadas*/
+:root{
+    --title-color: 322153;
+    --primary-color:#34cb79;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+/*BOX MODEL
+toda caixa tem tamanho(width, heigth), cor, fundo, etc.
+e tem a maneira que é vista pelo html: display
+alinhamento: no eixo x: align-items justify-content
+
+*/
+body{
+    background: #f0f5ff;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+

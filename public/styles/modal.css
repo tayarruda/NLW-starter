@@ -1,0 +1,103 @@
+/*para que a parte do modal cubra toda a pagina*/
+#modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0e0a14ef;
+    /*quero mover essa parte para cima do que era a tela inicial*/
+    /*isso se chama criar um novo contexto*/
+    position: fixed;
+    top: 0;
+/*ajeitando a posição dos elementos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 400ms;
+}
+
+#modal.hide{
+    /*colocamos a classe hide para ir no JS e quando clicar no botão essa parte modal desaparecer e quando clicar para buscar ela reaparecer*/
+    display: none;
+}
+#modal .content{
+    color: white;
+    width: 420px;
+
+}
+
+#modal .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+
+}
+
+#modal .header a{
+    background-image: url("../extras-aula-1/icones/x.svg");
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px;
+
+}
+
+#modal .header h1{
+    color: white;
+    font-size: 36px;
+    line-height: 42px;
+    
+}
+
+#modal form label{
+    font-size: 14px;
+    line-height: 16px;
+    /*força que fique a linha toda*/
+    display: block;
+    margin-bottom: 8px;
+
+}
+
+#modal form .field{
+    display: flex;
+
+}
+
+#modal form input{
+    flex: 1;
+    /**/
+    background-color: white;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #6c6c80;
+}
+
+#modal form button{
+    width: 72px;
+    height: 72px;
+    background-color: var(--primary-color);
+    border:0;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#modal form button:hover{
+    background-color: #2fb85b;
+    transition: 200ms;
+}
+
+/*para o modal do point created*/
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1{
+    color: white;
+    margin-top: 32px;
+}
